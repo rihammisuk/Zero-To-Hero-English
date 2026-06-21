@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero to Hero — English for Bengali Speakers</title>
+<meta name="description" content="A step-by-step spoken English course for Bengali speakers. Speaking first, theory last. Foundation, Walls, Roof — one step at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FCFAF4;
+  --paper-2:#F4EFE3;
+  --card:#FFFFFF;
+  --ink:#1F2D33;
+  --ink-soft:#56646B;
+  --sun:#E76A38;
+  --sun-deep:#C5531F;
+  --leaf:#2E7D63;
+  --leaf-deep:#1E5A47;
+  --peach:#FBE4D1;
+  --mint:#E3EFE6;
+  --sky:#E6EEF1;
+  --line:#E6DECC;
+  --line-soft:#EFE9DC;
+  --shadow:0 1px 2px rgba(31,45,51,.04), 0 8px 24px -12px rgba(31,45,51,.16);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.bn{font-family:'Noto Sans Bengali','Inter',sans-serif;}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;margin:0;}
+a{color:inherit}
+.eyebrow{font-family:'Space Mono',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sun-deep);font-weight:700;}
+
+/* ---------- TOP BAR ---------- */
+.topbar{
+  position:sticky;top:0;z-index:60;
+  background:rgba(252,250,244,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:1rem;padding:.7rem 1.25rem;}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;white-space:nowrap;}
+.brand .mark{width:30px;height:30px;flex:none;}
+.partnav{display:flex;gap:.15rem;overflow-x:auto;scrollbar-width:none;margin-left:auto;-webkit-overflow-scrolling:touch;}
+.partnav::-webkit-scrollbar{display:none}
+.partnav a{font-family:'Space Mono',monospace;font-size:.74rem;font-weight:700;color:var(--ink-soft);padding:.35rem .55rem;border-radius:8px;text-decoration:none;white-space:nowrap;transition:.15s;}
+.partnav a:hover{background:var(--paper-2);color:var(--ink)}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero-bg{position:absolute;inset:0;background:
+   radial-gradient(120% 90% at 88% 8%, rgba(231,106,56,.10), transparent 55%),
+   radial-gradient(90% 80% at 5% 95%, rgba(46,125,99,.10), transparent 55%);
+   pointer-events:none;}
+.hero-inner{max-width:1180px;margin:0 auto;padding:clamp(3rem,7vw,6rem) 1.25rem clamp(2.5rem,5vw,4rem);
+  display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4rem);align-items:center;position:relative;}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:600;letter-spacing:-.03em;}
+.hero h1 .to{font-style:italic;color:var(--sun);font-weight:500;}
+.hero .lede{font-size:clamp(1.05rem,1.8vw,1.3rem);color:var(--ink-soft);max-width:34ch;margin:1.4rem 0 0;}
+.hero .bn-tag{font-family:'Noto Sans Bengali',sans-serif;color:var(--leaf-deep);font-size:1.05rem;margin-top:1rem;line-height:1.8;}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem;}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1.5px solid transparent;transition:.18s;cursor:pointer;}
+.btn-primary{background:var(--sun);color:#fff;box-shadow:0 8px 20px -8px rgba(231,106,56,.6);}
+.btn-primary:hover{background:var(--sun-deep);transform:translateY(-1px);}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--card);}
+.btn-ghost:hover{border-color:var(--ink);}
+
+/* climb graphic */
+.climb{position:relative;}
+.tier{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.3rem;border-radius:16px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:.9rem;}
+.tier:nth-child(1){margin-left:0;}
+.tier:nth-child(2){margin-left:1.6rem;}
+.tier:nth-child(3){margin-left:3.2rem;}
+.tier .num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;width:2.4rem;flex:none;text-align:center;}
+.tier-roof .num{color:var(--sun);}
+.tier-walls .num{color:var(--leaf);}
+.tier-found .num{color:var(--ink-soft);}
+.tier .t-title{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:600;}
+.tier .t-sub{font-size:.85rem;color:var(--ink-soft);}
+.climb-note{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.12em;color:var(--ink-soft);text-transform:uppercase;text-align:right;margin-top:.4rem;}
+
+/* ---------- RULES STRIP ---------- */
+.rules{background:var(--ink);color:#F3EFE6;}
+.rules-inner{max-width:1180px;margin:0 auto;padding:2.4rem 1.25rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
+.rule .eyebrow{color:var(--sun);}
+.rule h4{font-size:1.05rem;color:#fff;margin:.4rem 0 .3rem;font-weight:600;}
+.rule p{font-size:.88rem;color:#C9C6BD;margin:0;line-height:1.55;}
+
+/* ---------- 30 STEP CLIMB ---------- */
+.steps-section{max-width:1180px;margin:0 auto;padding:clamp(3rem,6vw,5rem) 1.25rem;}
+.section-head{margin-bottom:2.4rem;max-width:60ch;}
+.section-head h2{font-size:clamp(2rem,4.5vw,3rem);margin-top:.5rem;}
+.section-head p{color:var(--ink-soft);margin:.8rem 0 0;}
+.steptrack{position:relative;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.7rem;}
+.stepcard{display:flex;gap:.8rem;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:.85rem .95rem;transition:.15s;cursor:pointer;}
+.stepcard:hover{border-color:var(--sun);transform:translateY(-2px);box-shadow:var(--shadow);}
+.stepcard .sn{font-family:'Space Mono',monospace;font-weight:700;font-size:.8rem;color:#fff;background:var(--leaf);width:28px;height:28px;border-radius:8px;display:grid;place-items:center;flex:none;transition:.15s;}
+.stepcard.done .sn{background:var(--sun);}
+.stepcard .stxt{font-size:.85rem;line-height:1.4;}
+.stepcard .stxt b{font-weight:600;display:block;font-size:.9rem;margin-bottom:.1rem;}
+.stepcard.done .stxt b{text-decoration:line-through;color:var(--ink-soft);}
+.progress-wrap{display:flex;align-items:center;gap:1rem;margin:1.6rem 0 0;flex-wrap:wrap;}
+.progress-bar{flex:1;min-width:200px;height:10px;background:var(--paper-2);border-radius:999px;overflow:hidden;border:1px solid var(--line);}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--leaf),var(--sun));transition:width .4s ease;}
+.progress-label{font-family:'Space Mono',monospace;font-size:.8rem;font-weight:700;color:var(--ink-soft);}
+.reset-btn{font-family:'Space Mono',monospace;font-size:.72rem;background:none;border:1px solid var(--line);border-radius:8px;padding:.35rem .6rem;color:var(--ink-soft);cursor:pointer;}
+.reset-btn:hover{border-color:var(--sun);color:var(--sun-deep)}
+
+/* ---------- LAYOUT (rail + content) ---------- */
+.layout{max-width:1180px;margin:0 auto;padding:0 1.25rem clamp(3rem,6vw,5rem);display:grid;grid-template-columns:210px 1fr;gap:clamp(1.5rem,4vw,3.5rem);}
+.rail{position:sticky;top:74px;align-self:start;height:max-content;padding-top:1rem;}
+.rail ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);}
+.rail li a{display:block;padding:.42rem 0 .42rem 1rem;margin-left:-2px;border-left:2px solid transparent;font-size:.85rem;color:var(--ink-soft);text-decoration:none;transition:.15s;line-height:1.3;}
+.rail li a .rn{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--leaf);margin-right:.45rem;font-weight:700;}
+.rail li a:hover{color:var(--ink);}
+.rail li a.active{color:var(--ink);border-left-color:var(--sun);font-weight:600;}
+.rail li a.active .rn{color:var(--sun);}
+
+/* ---------- PART / CONTENT ---------- */
+.part{padding:clamp(2rem,5vw,3.5rem) 0;border-top:1px solid var(--line-soft);}
+.part:first-child{border-top:none;}
+.part-num{font-family:'Space Mono',monospace;font-size:.78rem;letter-spacing:.16em;color:var(--sun-deep);font-weight:700;text-transform:uppercase;}
+.part h2{font-size:clamp(1.8rem,3.8vw,2.6rem);margin:.5rem 0 0;}
+.part > .sub{color:var(--ink-soft);margin:.6rem 0 1.6rem;max-width:62ch;}
+.part h3{font-size:1.3rem;margin:2rem 0 .7rem;font-weight:600;}
+.part h4{font-size:1.05rem;margin:1.4rem 0 .5rem;font-weight:600;}
+.part p{margin:.7rem 0;}
+
+/* analogy callout */
+.analogy{display:flex;gap:.9rem;background:var(--mint);border:1px solid #CFE3D5;border-radius:14px;padding:1.1rem 1.2rem;margin:1.2rem 0;}
+.analogy .ic{font-size:1.4rem;flex:none;line-height:1.3;}
+.analogy .lab{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf-deep);font-weight:700;display:block;margin-bottom:.2rem;}
+.analogy p{margin:0;font-size:.95rem;}
+
+.tip{background:var(--peach);border:1px solid #F2CDB0;border-radius:14px;padding:1.05rem 1.2rem;margin:1.2rem 0;}
+.tip .lab{font-family:'Space Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sun-deep);font-weight:700;display:block;margin-bottom:.25rem;}
+.tip p{margin:0;font-size:.95rem;}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;margin:1.1rem 0;border:1px solid var(--line);border-radius:14px;background:var(--card);box-shadow:var(--shadow);}
+table{border-collapse:collapse;width:100%;font-size:.92rem;}
+thead th{background:var(--paper-2);text-align:left;font-family:'Inter',sans-serif;font-weight:600;font-size:.78rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);padding:.7rem .9rem;border-bottom:1px solid var(--line);white-space:nowrap;}
+tbody td{padding:.6rem .9rem;border-bottom:1px solid var(--line-soft);vertical-align:top;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover{background:var(--paper);}
+td .ex{color:var(--ink-soft);font-style:italic;}
+td .bn{color:var(--leaf-deep);}
+.en{font-weight:500;}
+
+/* dialogue */
+.dialogue{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.1rem 1.2rem;margin:1.1rem 0;box-shadow:var(--shadow);}
+.dialogue .d-title{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem;}
+.line{display:flex;gap:.6rem;margin:.45rem 0;font-size:.93rem;line-height:1.45;}
+.line .who{font-family:'Space Mono',monospace;font-size:.72rem;font-weight:700;flex:none;width:64px;color:var(--ink-soft);padding-top:.15rem;}
+.line.you .who{color:var(--sun-deep);}
+.line.you .say{background:var(--peach);border-radius:4px 12px 12px 12px;padding:.4rem .7rem;}
+.line .say{background:var(--paper-2);border-radius:12px 4px 12px 12px;padding:.4rem .7rem;}
+.skeleton{font-size:.86rem;color:var(--ink-soft);margin-top:.7rem;padding-top:.7rem;border-top:1px dashed var(--line);}
+
+/* practice box */
+.practice{border:1px solid var(--leaf);border-radius:16px;background:linear-gradient(180deg,var(--mint),var(--card));margin:1.6rem 0 .5rem;overflow:hidden;}
+.practice .ph{display:flex;align-items:center;gap:.6rem;padding:.9rem 1.2rem;background:var(--leaf);color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;}
+.practice .pb{padding:1rem 1.3rem;}
+.practice ol{margin:.3rem 0;padding-left:1.2rem;}
+.practice li{margin:.4rem 0;font-size:.92rem;}
+.practice li b{color:var(--leaf-deep);}
+.ans{color:var(--sun-deep);font-weight:600;}
+
+/* chips / pills */
+.pillrow{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0;}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.85rem;font-weight:500;}
+.pill b{color:var(--sun-deep)}
+
+/* sentence bank */
+.bank{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.6rem;margin:1.3rem 0;}
+.sentence{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.7rem .85rem;cursor:pointer;transition:.15s;position:relative;}
+.sentence:hover{border-color:var(--sun);}
+.sentence .qn{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--ink-soft);font-weight:700;}
+.sentence .q{font-family:'Noto Sans Bengali',sans-serif;color:var(--ink);font-size:.95rem;margin:.15rem 0;}
+.sentence .a{color:var(--leaf-deep);font-weight:500;font-size:.92rem;max-height:0;overflow:hidden;opacity:0;transition:.25s;}
+.sentence.open .a{max-height:80px;opacity:1;margin-top:.3rem;}
+.sentence .hint{font-family:'Space Mono',monospace;font-size:.64rem;color:var(--ink-soft);letter-spacing:.08em;text-transform:uppercase;}
+.sentence.open .hint{display:none;}
+.bank-controls{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-bottom:.5rem;}
+
+/* footer */
+.footer{background:var(--ink);color:#D9D5CC;border-top:1px solid var(--line);}
+.footer-inner{max-width:1180px;margin:0 auto;padding:3rem 1.25rem;}
+.footer .final{font-family:'Fraunces',serif;font-size:clamp(1.4rem,3vw,2rem);color:#fff;font-weight:500;max-width:30ch;line-height:1.25;}
+.footer .bn{color:#E9B79A;margin-top:1rem;font-size:1rem;line-height:1.9;}
+.footer .three{display:flex;gap:1.5rem;flex-wrap:wrap;margin:2rem 0 0;}
+.footer .three div{flex:1;min-width:180px;}
+.footer .three .eyebrow{color:var(--sun);}
+.footer .three p{font-size:.88rem;color:#C2BEB4;margin:.3rem 0 0;}
+.footer .meta{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid #38444A;font-size:.8rem;color:#8C9197;}
+
+/* reveal animation */
+.reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;}
+  .climb{order:-1;}
+  .rules-inner{grid-template-columns:1fr 1fr;}
+  .layout{grid-template-columns:1fr;}
+  .rail{display:none;}
+}
+@media (max-width:560px){
+  body{font-size:16px;}
+  .rules-inner{grid-template-columns:1fr;}
+  .tier:nth-child(2),.tier:nth-child(3){margin-left:0;}
+  .brand span.full{display:none;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="3" y="22" width="9" height="7" rx="1.5" fill="#56646B"/>
+        <rect x="11.5" y="14" width="9" height="15" rx="1.5" fill="#2E7D63"/>
+        <rect x="20" y="6" width="9" height="23" rx="1.5" fill="#E76A38"/>
+      </svg>
+      <span>Zero <span class="full">to Hero</span></span>
+    </div>
+    <nav class="partnav" aria-label="Parts">
+      <a href="#steps">Steps</a>
+      <a href="#p1">1·Mindset</a>
+      <a href="#p2">2·80/20</a>
+      <a href="#p3">3·Words</a>
+      <a href="#p4">4·Grammar</a>
+      <a href="#p5">5·Patterns</a>
+      <a href="#p6">6·Talk</a>
+      <a href="#p7">7·Fluency</a>
+      <a href="#p8">8·Upgrade</a>
+      <a href="#p9">9·Mistakes</a>
+      <a href="#p10">10·Sound</a>
+      <a href="#p11">11·Work</a>
+      <a href="#p12">12·Plan</a>
+      <a href="#p13">13·Revise</a>
+      <a href="#bank">Test Bank</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="eyebrow">English speaking · for Bengali speakers</span>
+      <h1>Zero <span class="to">to</span> Hero</h1>
+      <p class="lede">A spoken-English ladder built for Bengali speakers. Speaking first, theory last. You only ever hold today's step in your head.</p>
+      <p class="bn-tag">শূন্য থেকে শুরু। প্রতিদিন অনুশীলন। একদিন সাবলীল।<br>এই বইটি একটি মই — এক ধাপ শেষ না করে পরের ধাপে যাবেন না।</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#steps">Start the climb →</a>
+        <a class="btn btn-ghost" href="#p1">Read Part 1</a>
+      </div>
+    </div>
+    <div class="climb">
+      <div class="tier tier-roof"><div class="num">∴</div><div><div class="t-title">Roof — you speak</div><div class="t-sub">Conversations, fluency, interviews, the real world</div></div></div>
+      <div class="tier tier-walls"><div class="num">▥</div><div><div class="t-title">Walls — you build</div><div class="t-sub">Grammar tools, sentence patterns, daily dialogues</div></div></div>
+      <div class="tier tier-found"><div class="num">▤</div><div><div class="t-title">Foundation — you decide</div><div class="t-sub">Mindset, the 80/20 rule, your core 1000 words</div></div></div>
+      <div class="climb-note">Every chapter stands on the one before it</div>
+    </div>
+  </div>
+</section>
+
+<section class="rules">
+  <div class="rules-inner">
+    <div class="rule reveal"><span class="eyebrow">Rule 01</span><h4>Go in order</h4><p>Part 1 → Part 13. Every word and pattern is reused later. Skip, and the next step feels hard.</p></div>
+    <div class="rule reveal"><span class="eyebrow">Rule 02</span><h4>Speak out loud</h4><p>Reading silently builds reading. Speaking out loud builds speaking. Read with your mouth, not your eyes.</p></div>
+    <div class="rule reveal"><span class="eyebrow">Rule 03</span><h4>The 80% gate</h4><p>If you can do 8 of 10 practice items without looking, move on. If not, repeat tomorrow. Repeating is training.</p></div>
+    <div class="rule reveal"><span class="eyebrow">Rule 04</span><h4>45–60 min a day</h4><p>Speed does not matter. Daily practice matters. A 15-minute bad day is fine. A zero day is not.</p></div>
+  </div>
+</section>
+
+<section class="steps-section" id="steps">
+  <div class="section-head reveal">
+    <span class="eyebrow">Your path</span>
+    <h2>The 30-step climb</h2>
+    <p>One step = one or two days. Tap a step when you pass it — your progress saves on your device. Pass rule: 8 out of 10 in the practice means move on; less means repeat the step tomorrow.</p>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
+    <span class="progress-label" id="progLabel">0 / 30 steps</span>
+    <button class="reset-btn" id="resetSteps">Reset</button>
+  </div>
+  <div class="steptrack" id="stepTrack"></div>
+</section>
+
+<div class="layout">
+  <aside class="rail">
+    <ol>
+      <li><a href="#p1"><span class="rn">01</span>Mindset</a></li>
+      <li><a href="#p2"><span class="rn">02</span>The 80/20 Rule</a></li>
+      <li><a href="#p3"><span class="rn">03</span>Essential Vocabulary</a></li>
+      <li><a href="#p4"><span class="rn">04</span>Speaking Grammar</a></li>
+      <li><a href="#p5"><span class="rn">05</span>Sentence Patterns</a></li>
+      <li><a href="#p6"><span class="rn">06</span>Daily Conversation</a></li>
+      <li><a href="#p7"><span class="rn">07</span>Fluency Training</a></li>
+      <li><a href="#p8"><span class="rn">08</span>Better Vocabulary</a></li>
+      <li><a href="#p9"><span class="rn">09</span>Common Mistakes</a></li>
+      <li><a href="#p10"><span class="rn">10</span>Pronunciation</a></li>
+      <li><a href="#p11"><span class="rn">11</span>Interview &amp; Office</a></li>
+      <li><a href="#p12"><span class="rn">12</span>Daily Practice Plan</a></li>
+      <li><a href="#p13"><span class="rn">13</span>Revision System</a></li>
+      <li><a href="#bank"><span class="rn">★</span>100-Sentence Bank</a></li>
+    </ol>
+  </aside>
+  <div class="content">
+
+<!-- PART 1 -->
+<section class="part reveal" id="p1">
+  <span class="part-num">Part 01 · Foundation</span>
+  <h2>Mindset — train your brain before your tongue</h2>
+  <p class="sub">You did not learn to ride a bicycle by reading about wheels. You sat on the seat, fell, got up, and tried again. Speaking is the same. Mistakes are the pedals — without them, the bicycle does not move.</p>
+
+  <h3>Why your brain goes blank</h3>
+  <p>It goes blank for one reason: you try to do three jobs at once — ① think the idea in Bengali, ② translate it to English, ③ check the grammar. Three jobs at once = a traffic jam in the brain = blank.</p>
+  <div class="tip"><span class="lab">The fix</span><p>Reduce three jobs to one. Speak in small, ready-made pieces you have already practised. Say <b>"I want to…"</b> a hundred times in practice and your mouth says it with no translation, no grammar check, no traffic jam. This whole course loads your brain with ready-made pieces.</p></div>
+
+  <h3>How to stop translating from Bengali</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Step</th><th>Method</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Learn in chunks, not single words. A chunk is a group of words that always travel together.</td><td class="ex">Learn "have breakfast" — not "have" + "breakfast" apart.</td></tr>
+      <tr><td>2</td><td>Connect words to pictures, not to Bengali words.</td><td class="ex">"apple" → imagine a red apple, not the word আপেল.</td></tr>
+      <tr><td>3</td><td>Name things around you in English all day.</td><td class="ex">While walking: "bus… shop… tree… cold…"</td></tr>
+      <tr><td>4</td><td>Self-talk for 2 minutes a day — mistakes allowed.</td><td class="ex">"I am making tea. The water is hot. I need sugar."</td></tr>
+      <tr><td>5</td><td>Accept simple sentences. A simple correct one beats a perfect Bengali one stuck in your head.</td><td class="ex">Think "Food is good" instead of freezing.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>How to think in English (it grows like a plant)</h3>
+  <div class="pillrow">
+    <span class="pill"><b>Week 1–2</b> single words: tea, bag, friend, rain</span>
+    <span class="pill"><b>Week 3–4</b> tiny sentences: "I am tired."</span>
+    <span class="pill"><b>Month 2</b> plans: "I will go to work, then study."</span>
+    <span class="pill"><b>Month 3+</b> opinions: "I think this is boring."</span>
+  </div>
+  <div class="analogy"><div class="ic">🕐</div><div><span class="lab">The English Hour</span><p>Choose one hour every day — your bus ride, your cooking time. In that hour, every thought must be in English, even baby English. One hour of English thinking daily beats five hours of grammar reading.</p></div></div>
+
+  <h3>The Rule of 3 — kill repetition</h3>
+  <div class="tip"><span class="lab">Rule of 3</span><p>Every time you learn a new word, immediately make <b>3 spoken sentences</b> with it. A word used 3 times by your mouth moves from "I understand it" to "I can say it." This is how we stop you repeating the same five words forever.</p></div>
+
+  <div class="practice">
+    <div class="ph">✅ Part 1 Practice</div>
+    <div class="pb"><ol>
+      <li><b>Write:</b> 5 things near you right now in English. Then 3 tiny sentences: "I am ___." / "I like ___." / "I want ___."</li>
+      <li><b>Speak (2 min):</b> Describe what you are doing now. Baby English allowed — "I am sitting. I am reading. The room is quiet."</li>
+      <li><b>Bengali → English:</b> আমি ক্লান্ত → <span class="en">I am tired.</span> · এটা ভালো → <span class="en">This is good.</span> · আমি চা চাই → <span class="en">I want tea.</span></li>
+      <li><b>Self-test:</b> What are the 3 jobs that make your brain blank? What is the Rule of 3? What is the English Hour?</li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- PART 2 -->
+<section class="part reveal" id="p2">
+  <span class="part-num">Part 02 · Foundation</span>
+  <h2>The 80/20 Rule — learn less, speak more</h2>
+  <p class="sub">A menu may have 100 dishes, but 80% of customers order the same 20. English has 170,000+ words, but daily talk uses a small set. We learn that small set first, deeply.</p>
+
+  <h3>What covers 80% of daily English</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>You need</th><th>How much</th><th>Where</th></tr></thead>
+    <tbody>
+      <tr><td class="en">Core words</td><td>~1000 most common words</td><td>Part 3</td></tr>
+      <tr><td class="en">Grammar for speaking</td><td>Only 11 tools (not 500 rules)</td><td>Part 4</td></tr>
+      <tr><td class="en">Sentence patterns</td><td>~50 reusable structures</td><td>Part 5</td></tr>
+      <tr><td class="en">Conversations</td><td>16 real-life situations</td><td>Part 6</td></tr>
+      <tr><td class="en">Pronunciation</td><td>~12 problem sounds</td><td>Part 10</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>What to ignore for now</h3>
+  <div class="pillrow">
+    <span class="pill">✕ Rare grammar (past perfect continuous)</span>
+    <span class="pill">✕ Dictionary words (magnanimous, ubiquitous)</span>
+    <span class="pill">✕ Writing words (furthermore, henceforth)</span>
+    <span class="pill">✕ Memorizing grammar rule names</span>
+  </div>
+  <div class="tip"><span class="lab">The 80/20 promise</span><p>Master only Parts 3, 4 and 5 and you can already survive in shops, buses, university, phone calls and small talk. Everything after that is polish.</p></div>
+
+  <div class="practice">
+    <div class="ph">✅ Part 2 Practice</div>
+    <div class="pb"><ol>
+      <li><b>Write</b> the 5 places where YOU need English most — university, work, shop, phone, doctor. This is your 80%. Keep it.</li>
+      <li><b>Say out loud:</b> "I don't need all of English. I need MY English. I will learn the most useful words first."</li>
+      <li><b>Bengali → English:</b> আমার ইংরেজি দরকার দোকানে, কাজে, এবং ফোনে → <span class="en">I need English in the shop, at work, and on the phone.</span></li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- PART 3 -->
+<section class="part reveal" id="p3">
+  <span class="part-num">Part 03 · Foundation</span>
+  <h2>Essential Vocabulary — your word bank</h2>
+  <p class="sub">Words are ingredients; grammar is the cooking method. You cannot cook without ingredients, so we fill the kitchen first — in family groups, because the brain stores groups better than random lists.</p>
+  <div class="analogy"><div class="ic">🍳</div><div><span class="lab">How to study</span><p>One table per day. For each word: say it 3 times, read the example, then make ONE sentence of your own out loud (Rule of 3). Come back to each table after 3 days.</p></div></div>
+
+  <h3>Stage 1 — The Survival 60</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">I / you / he / she / we / they</td><td class="bn">আমি / তুমি / সে / সে / আমরা / তারা</td><td class="ex">I am Riham. You are my friend.</td></tr>
+      <tr><td class="en">this / that</td><td class="bn">এটা / ওটা</td><td class="ex">This is my phone. That is your bag.</td></tr>
+      <tr><td class="en">here / there</td><td class="bn">এখানে / সেখানে</td><td class="ex">Come here. The shop is there.</td></tr>
+      <tr><td class="en">yes / no / okay</td><td class="bn">হ্যাঁ / না / ঠিক আছে</td><td class="ex">Yes, please. No, thank you.</td></tr>
+      <tr><td class="en">please / thanks / sorry / excuse me</td><td class="bn">দয়া করে / ধন্যবাদ / দুঃখিত / মাফ করবেন</td><td class="ex">Excuse me, where is the bus stop?</td></tr>
+      <tr><td class="en">what / who / where / when / why / how</td><td class="bn">কী / কে / কোথায় / কখন / কেন / কীভাবে</td><td class="ex">What is this? How are you?</td></tr>
+      <tr><td class="en">good / bad · big / small</td><td class="bn">ভালো / খারাপ · বড় / ছোট</td><td class="ex">The food is good. A small room.</td></tr>
+      <tr><td class="en">now / today / tomorrow / yesterday</td><td class="bn">এখন / আজ / আগামীকাল / গতকাল</td><td class="ex">I am busy now. I will come tomorrow.</td></tr>
+      <tr><td class="en">want / need / like / have</td><td class="bn">চাওয়া / প্রয়োজন / পছন্দ করা / আছে</td><td class="ex">I want tea. I need help. I like cricket.</td></tr>
+      <tr><td class="en">go / come / eat / drink / sleep</td><td class="bn">যাওয়া / আসা / খাওয়া / পান করা / ঘুমানো</td><td class="ex">I go to work. Come with me.</td></tr>
+      <tr><td class="en">do / make / get / take / give</td><td class="bn">করা / বানানো / পাওয়া / নেওয়া / দেওয়া</td><td class="ex">I do my homework. Give me water.</td></tr>
+      <tr><td class="en">know / think / see / say / tell</td><td class="bn">জানা / ভাবা / দেখা / বলা / বলা (কাউকে)</td><td class="ex">I know him. I think it is good.</td></tr>
+      <tr><td class="en">can / will · and / but / or / because / so</td><td class="bn">পারা / করব · এবং / কিন্তু / অথবা / কারণ / তাই</td><td class="ex">I am tired because I worked, so I will sleep.</td></tr>
+      <tr><td class="en">very / also / only / again · more / less</td><td class="bn">খুব / এছাড়াও / শুধু / আবার · আরও / কম</td><td class="ex">It is very hot. Say it again, please.</td></tr>
+      <tr><td class="en">home / work / money / food / water</td><td class="bn">বাড়ি / কাজ / টাকা / খাবার / পানি</td><td class="ex">I am going home. I need money for food.</td></tr>
+      <tr><td class="en">man / woman / friend / family / people</td><td class="bn">পুরুষ / মহিলা / বন্ধু / পরিবার / মানুষজন</td><td class="ex">My family is in Bangladesh.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">Memory trick</span><p>The Survival 60 + the grammar in Part 4 already build thousands of sentences. Take <b>want</b> + things around you: "I want tea / water / rest / a new phone / a holiday." One verb, five sentences.</p></div>
+
+  <h3>Stage 2 — People &amp; Family</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">father / mother / parents</td><td class="bn">বাবা / মা / বাবা-মা</td><td class="ex">My parents live in Dhaka.</td></tr>
+      <tr><td class="en">brother / sister</td><td class="bn">ভাই / বোন</td><td class="ex">I have one brother and two sisters.</td></tr>
+      <tr><td class="en">husband / wife / spouse</td><td class="bn">স্বামী / স্ত্রী / জীবনসঙ্গী</td><td class="ex">My wife is a doctor.</td></tr>
+      <tr><td class="en">son / daughter / child / children</td><td class="bn">ছেলে / মেয়ে / শিশু / শিশুরা</td><td class="ex">They have two children.</td></tr>
+      <tr><td class="en">neighbour / colleague / classmate</td><td class="bn">প্রতিবেশী / সহকর্মী / সহপাঠী</td><td class="ex">My colleague is very helpful.</td></tr>
+      <tr><td class="en">boss / manager / teacher / student</td><td class="bn">বস / ম্যানেজার / শিক্ষক / ছাত্র</td><td class="ex">I am a student.</td></tr>
+      <tr><td class="en">doctor / driver / shopkeeper / customer</td><td class="bn">ডাক্তার / চালক / দোকানদার / ক্রেতা</td><td class="ex">The customer is waiting.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Stage 3 — Food &amp; Drink</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">rice / bread / egg / fish / meat / chicken</td><td class="bn">ভাত / রুটি / ডিম / মাছ / মাংস / মুরগি</td><td class="ex">I eat rice and fish every day.</td></tr>
+      <tr><td class="en">vegetable / fruit / apple / banana / mango</td><td class="bn">সবজি / ফল / আপেল / কলা / আম</td><td class="ex">Mango is my favourite fruit.</td></tr>
+      <tr><td class="en">milk / tea / coffee / juice / sugar / salt</td><td class="bn">দুধ / চা / কফি / জুস / চিনি / লবণ</td><td class="ex">Tea with less sugar, please.</td></tr>
+      <tr><td class="en">breakfast / lunch / dinner / snack</td><td class="bn">সকালের নাশতা / দুপুরের খাবার / রাতের খাবার / হালকা খাবার</td><td class="ex">I have breakfast at 8 o'clock.</td></tr>
+      <tr><td class="en">hungry / thirsty / full / tasty / spicy / sweet</td><td class="bn">ক্ষুধার্ত / তৃষ্ণার্ত / পেট ভরা / সুস্বাদু / ঝাল / মিষ্টি</td><td class="ex">I am hungry. This curry is too spicy!</td></tr>
+      <tr><td class="en">menu / bill / price / cheap / expensive / fresh</td><td class="bn">মেনু / বিল / দাম / সস্তা / দামি / তাজা</td><td class="ex">This restaurant is expensive.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Stage 4 — Home &amp; Daily Things</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">room / kitchen / bathroom / door / window</td><td class="bn">ঘর / রান্নাঘর / বাথরুম / দরজা / জানালা</td><td class="ex">Please close the window.</td></tr>
+      <tr><td class="en">bed / chair / table / fan / light / wall</td><td class="bn">বিছানা / চেয়ার / টেবিল / পাখা / বাতি / দেয়াল</td><td class="ex">Turn on the fan, please.</td></tr>
+      <tr><td class="en">phone / charger / laptop / TV / key / clock</td><td class="bn">ফোন / চার্জার / ল্যাপটপ / টিভি / চাবি / ঘড়ি</td><td class="ex">Where is my charger?</td></tr>
+      <tr><td class="en">clothes / shirt / pants / shoes / bag / umbrella</td><td class="bn">কাপড় / শার্ট / প্যান্ট / জুতা / ব্যাগ / ছাতা</td><td class="ex">Take an umbrella. It may rain.</td></tr>
+      <tr><td class="en">clean / dirty / new / old / open / closed</td><td class="bn">পরিষ্কার / নোংরা / নতুন / পুরনো / খোলা / বন্ধ</td><td class="ex">The shop is closed. My room is clean.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Stage 5 — Time &amp; Numbers</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">morning / afternoon / evening / night</td><td class="bn">সকাল / দুপুর / সন্ধ্যা / রাত</td><td class="ex">Good morning! I study at night.</td></tr>
+      <tr><td class="en">hour / minute / o'clock / half past</td><td class="bn">ঘণ্টা / মিনিট / টা (সময়) / সাড়ে</td><td class="ex">It is half past nine.</td></tr>
+      <tr><td class="en">early / late / soon / always / usually / never</td><td class="bn">আগে / দেরি / শীঘ্রই / সবসময় / সাধারণত / কখনো না</td><td class="ex">I am never late. I usually sleep at 11.</td></tr>
+      <tr><td class="en">before / after / next / last / first / then</td><td class="bn">আগে / পরে / পরবর্তী / গত / প্রথম / তারপর</td><td class="ex">First I cook, then I eat.</td></tr>
+      <tr><td class="en">one–ten, twenty, fifty, hundred, thousand</td><td class="bn">এক–দশ, বিশ, পঞ্চাশ, একশ, এক হাজার</td><td class="ex">It costs two hundred dollars.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Stage 6 — Places &amp; Travel</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">shop / market / bank / hospital / pharmacy</td><td class="bn">দোকান / বাজার / ব্যাংক / হাসপাতাল / ফার্মেসি</td><td class="ex">The pharmacy is next to the bank.</td></tr>
+      <tr><td class="en">school / university / library / office / park</td><td class="bn">স্কুল / বিশ্ববিদ্যালয় / লাইব্রেরি / অফিস / পার্ক</td><td class="ex">I study in the library after class.</td></tr>
+      <tr><td class="en">road / station / airport / bus stop / bridge</td><td class="bn">রাস্তা / স্টেশন / বিমানবন্দর / বাস স্টপ / সেতু</td><td class="ex">The station is near my home.</td></tr>
+      <tr><td class="en">bus / train / car / taxi / plane / ticket</td><td class="bn">বাস / ট্রেন / গাড়ি / ট্যাক্সি / বিমান / টিকিট</td><td class="ex">I take the train to the city.</td></tr>
+      <tr><td class="en">left / right / straight / near / far / behind</td><td class="bn">বামে / ডানে / সোজা / কাছে / দূরে / পেছনে</td><td class="ex">Go straight, then turn left.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Stage 7 — Feelings &amp; Health</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">happy / sad / angry / afraid / nervous / excited</td><td class="bn">খুশি / দুঃখিত / রাগান্বিত / ভীত / নার্ভাস / উত্তেজিত</td><td class="ex">I am nervous before exams.</td></tr>
+      <tr><td class="en">tired / sick / fine / better / worse / well</td><td class="bn">ক্লান্ত / অসুস্থ / ভালো / আরও ভালো / আরও খারাপ / সুস্থ</td><td class="ex">I was sick yesterday, but I am better now.</td></tr>
+      <tr><td class="en">pain / headache / fever / cold / cough</td><td class="bn">ব্যথা / মাথাব্যথা / জ্বর / সর্দি / কাশি</td><td class="ex">I have a headache and a fever.</td></tr>
+      <tr><td class="en">busy / free / bored / interested / worried</td><td class="bn">ব্যস্ত / ফ্রি / বিরক্ত / আগ্রহী / চিন্তিত</td><td class="ex">Are you free tomorrow?</td></tr>
+      <tr><td class="en">love / hate / hope / miss / enjoy / feel</td><td class="bn">ভালোবাসা / ঘৃণা / আশা / মিস করা / উপভোগ / অনুভব</td><td class="ex">I miss my family. I hope you feel better.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Stage 8 — The Power 50 Verbs (engines of English)</h3>
+  <p>V1 → V2 is the present then past form. The past form is the same for everyone — no he/she/it problem.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Verb (V1 → V2)</th><th>অর্থ</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">be (am/is/are → was/were)</td><td class="bn">হওয়া</td><td class="ex">I am a student. I was busy yesterday.</td></tr>
+      <tr><td class="en">have → had · do → did · make → made</td><td class="bn">থাকা/আছে · করা · বানানো</td><td class="ex">I had lunch. She made tea.</td></tr>
+      <tr><td class="en">go → went · come → came</td><td class="bn">যাওয়া · আসা</td><td class="ex">I went home. He came late.</td></tr>
+      <tr><td class="en">get → got · take → took · give → gave</td><td class="bn">পাওয়া · নেওয়া · দেওয়া</td><td class="ex">I got a job. He gave me a book.</td></tr>
+      <tr><td class="en">see → saw · say → said · tell → told</td><td class="bn">দেখা · বলা · বলা (কাউকে)</td><td class="ex">I saw him. She told me the truth.</td></tr>
+      <tr><td class="en">know → knew · think → thought</td><td class="bn">জানা · ভাবা</td><td class="ex">I thought it was easy.</td></tr>
+      <tr><td class="en">eat → ate · drink → drank · sleep → slept</td><td class="bn">খাওয়া · পান করা · ঘুমানো</td><td class="ex">I woke up early and ate breakfast.</td></tr>
+      <tr><td class="en">buy → bought · pay → paid · cost → cost</td><td class="bn">কেনা · টাকা দেওয়া · দাম হওয়া</td><td class="ex">I bought a ticket. It cost ten dollars.</td></tr>
+      <tr><td class="en">feel → felt · become → became</td><td class="bn">অনুভব করা · হয়ে ওঠা</td><td class="ex">I felt happy. He became a doctor.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">Verb of the day</span><p>Pick ONE verb each morning. Use it 5 times that day in real life: "I took the bus… I took notes… I took a break…" One verb learned deeply beats ten learned half.</p></div>
+
+  <h3>Stage 9 — University, Work &amp; Technology</h3>
+  <div class="pillrow">
+    <span class="pill">class · lecture · assignment · exam · result · degree</span>
+    <span class="pill">subject · question · answer · example · note</span>
+    <span class="pill">job · salary · shift · meeting · customer</span>
+    <span class="pill">email · message · internet · website · password · file</span>
+    <span class="pill">apply · submit · attend · explain · practise · improve</span>
+  </div>
+
+  <h3>Stage 10 — Describing Words &amp; Weather</h3>
+  <div class="pillrow">
+    <span class="pill">beautiful · nice · great · wonderful · terrible</span>
+    <span class="pill">fast · slow · loud · quiet · heavy · light</span>
+    <span class="pill">sunny · rainy · cloudy · windy · hot · cold · warm</span>
+    <span class="pill">safe · dangerous · careful · lucky · proud · famous</span>
+    <span class="pill">kind · friendly · honest · polite · lazy</span>
+  </div>
+
+  <h3>Stages 11–14 — Body, Money, Phrasal Verbs &amp; Pocket Dictionary</h3>
+  <p>These finish your core 1000. Study them in compact mode — word, meaning, one quick spoken sentence.</p>
+  <div class="pillrow">
+    <span class="pill"><b>Body</b> head · eye · hand · leg · back · stomach · heart</span>
+    <span class="pill"><b>Money</b> cash · card · price · discount · save · spend · rent · bill</span>
+  </div>
+  <h4>The phrasal-verb 25 (learn each as ONE word)</h4>
+  <div class="pillrow">
+    <span class="pill">get up · wake up · go out · come back</span>
+    <span class="pill">turn on · turn off · pick up · put down</span>
+    <span class="pill">look for · find out · look after · look forward to</span>
+    <span class="pill">give up · keep on · carry on · work out</span>
+    <span class="pill">fill in · hand in · write down</span>
+    <span class="pill">run out of · deal with · put off · set up</span>
+    <span class="pill">catch up · drop off · show up</span>
+  </div>
+  <div class="tip"><span class="lab">Milestone</span><p>Stages 1–14 together give you a genuine core-1000 word bank. You do not need another vocabulary book — you need to USE these daily. Parts 5–8 recycle every one of them, which is how they become permanent.</p></div>
+
+  <div class="practice">
+    <div class="ph">✅ Part 3 Practice</div>
+    <div class="pb"><ol>
+      <li><b>Room drill:</b> look around, name 15 things in English in 60 seconds.</li>
+      <li><b>Family drill:</b> speak 1 minute about your family using Stage 2 words.</li>
+      <li><b>Bengali → English:</b> আমি প্রতিদিন সকালে চা খাই → <span class="en">I drink tea every morning.</span> · দোকানটা ব্যাংকের কাছে → <span class="en">The shop is near the bank.</span></li>
+      <li><b>Self-test:</b> without looking, say 5 feeling words, 5 food words, 5 travel words, and the past of go, come, see, eat, buy.</li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- PART 4 -->
+<section class="part reveal" id="p4">
+  <span class="part-num">Part 04 · Walls</span>
+  <h2>Speaking Grammar — only the grammar your mouth needs</h2>
+  <p class="sub">Grammar is the GPS of a car. You don't need to know how the satellite works — you need it to take you to the right place. Here are 11 tools, in order. Each uses the words from Part 3. The order matters: 4.1 is the foundation of everything.</p>
+
+  <h3>Tool 1 — am / is / are (the "to be" engine)</h3>
+  <p>In Bengali we say "আমি ক্লান্ত" with no verb. English ALWAYS needs a verb. When there is no action, English uses <b>am / is / are</b> as the glue.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Person</th><th>Glue</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">I</td><td class="en">am</td><td class="ex">I am tired. I am from Bangladesh.</td></tr>
+      <tr><td class="en">He / She / It · one thing</td><td class="en">is</td><td class="ex">She is a doctor. The tea is hot.</td></tr>
+      <tr><td class="en">You / We / They · many</td><td class="en">are</td><td class="ex">We are friends. The shops are closed.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">Memory trick</span><p>I-AM, one-IS, many-ARE. Say it like a rhythm: "I am, he is, they are" ten times fast. Your mouth must know it, not your memory.</p></div>
+
+  <h3>Tool 2 — have / has (owning &amp; experiencing)</h3>
+  <p><b>have</b> is your pocket — things, family, problems, time. "আমার আছে" = I have.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Person</th><th>Verb</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">I / You / We / They</td><td class="en">have</td><td class="ex">I have a class today. They have two children.</td></tr>
+      <tr><td class="en">He / She / It</td><td class="en">has</td><td class="ex">She has a new job. He has a fever.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="pillrow"><span class="pill">have breakfast</span><span class="pill">have a shower</span><span class="pill">have a look</span><span class="pill">have time</span><span class="pill">have a question</span><span class="pill">have a headache</span></div>
+
+  <h3>Tool 3 — Present Simple (daily habits &amp; facts)</h3>
+  <p>Your daily-routine camera — things you do every day, always. <b>The only rule:</b> with he/she/it, the verb takes <b>-s</b>.</p>
+  <div class="pillrow"><span class="pill">I work · you work · we work — <b>he works · she studies · it rains</b></span></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Use for</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td class="en">Habits</td><td class="ex">I drink tea every morning. She goes to work by train.</td></tr>
+      <tr><td class="en">Facts</td><td class="ex">The sun rises in the east.</td></tr>
+      <tr><td class="en">Timetables</td><td class="ex">The class starts at 9. The bus leaves at 5:30.</td></tr>
+      <tr><td class="en">Frequency words go before the verb</td><td class="ex">I usually cook at night. I never smoke.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Tool 4 — Present Continuous (happening NOW)</h3>
+  <p>The live camera — what is happening this minute. Formula: <b>am/is/are + verb-ing</b>. (Tool 1 lives inside Tool 4 — this is why order matters.)</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Now (live)</th><th>Every day (routine)</th></tr></thead>
+    <tbody>
+      <tr><td class="ex">I am cooking dinner.</td><td class="ex">I cook dinner every night.</td></tr>
+      <tr><td class="ex">It is raining. Look outside!</td><td class="ex">It rains a lot in July.</td></tr>
+      <tr><td class="ex">They are waiting for the bus.</td><td class="ex">They wait at this stop every day.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">Bonus use</span><p>Near-future plans: "I am meeting my friend tomorrow." "We are moving next month."</p></div>
+
+  <h3>Tool 5 — Past Simple (finished stories)</h3>
+  <p>Your photo album — finished moments: yesterday, last week, in 2020. Regular verbs add <b>-ed</b>; irregular verbs change shape (go → went). Same for everyone — I went, she went, they went.</p>
+  <div class="pillrow"><span class="pill"><b>was / were</b> = the past of am/is/are: I/he/she/it <b>was</b> · you/we/they <b>were</b></span></div>
+  <div class="tip"><span class="lab">The most powerful habit in this book</span><p>The "Yesterday Story" — every night before sleep, say: "Yesterday I woke up at… I went to… I met… I ate…" One minute, every night.</p></div>
+
+  <h3>Tool 6 — Future (will &amp; going to)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Form</th><th>When</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td class="en">going to + verb</td><td>Plan made before speaking</td><td class="ex">I am going to visit my family in December.</td></tr>
+      <tr><td class="en">will + verb</td><td>Instant decision, promise, prediction</td><td class="ex">The phone is ringing — I will answer it. It will rain tonight.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">Memory trick</span><p>Plan → <b>going to</b>. Promise → <b>will</b>. Both are correct in most daily talk, so never freeze choosing — just speak.</p></div>
+
+  <h3>Tool 7 — Present Perfect (past with a link to now)</h3>
+  <p>Imagine mud on your shoes. The walking happened in the past, but the mud is visible NOW. Formula: <b>have/has + V3</b> (third form).</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Use</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td class="en">Life experience (ever/never)</td><td class="ex">Have you ever eaten sushi? I have never seen snow.</td></tr>
+      <tr><td class="en">Just finished (just/already/yet)</td><td class="ex">I have just finished. I haven't eaten yet.</td></tr>
+      <tr><td class="en">Started before, still true (for/since)</td><td class="ex">I have lived in Sydney for two years.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="pillrow"><span class="pill">go→gone</span><span class="pill">see→seen</span><span class="pill">eat→eaten</span><span class="pill">do→done</span><span class="pill">take→taken</span><span class="pill">write→written</span><span class="pill">be→been</span></div>
+
+  <h3>Tool 8 — Negatives &amp; Questions</h3>
+  <p>Questions and negatives need a helper (do/does/did), like a rickshaw needs a puller. Exception: am/is/are, will, can are their OWN helpers.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Tense</th><th>Negative</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">am/is/are</td><td class="en">+ not</td><td class="ex">I am not ready. It isn't cold.</td></tr>
+      <tr><td class="en">Present simple</td><td class="en">don't / doesn't + verb</td><td class="ex">She doesn't like coffee (NOT doesn't likes).</td></tr>
+      <tr><td class="en">Past simple</td><td class="en">didn't + verb</td><td class="ex">I didn't go (NOT didn't went).</td></tr>
+      <tr><td class="en">Future</td><td class="en">won't + verb</td><td class="ex">I won't be late, I promise.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">The WH machine</span><p><b>WH + helper + subject + verb?</b> — What do you want? · Where does she live? · When did you arrive? · How do I get to the station? · How much is this?</p></div>
+
+  <h3>Tool 9 — Modal Verbs (can, could, should, must, may, would)</h3>
+  <p>Modals are spices — they add ability, advice, permission, politeness. Formula is always <b>modal + base verb</b> (never -s, -ed, or to).</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Modal</th><th>Flavour</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">can / can't</td><td>ability, permission</td><td class="ex">I can drive. Can I sit here?</td></tr>
+      <tr><td class="en">could</td><td>polite request, past ability</td><td class="ex">Could you help me, please?</td></tr>
+      <tr><td class="en">should</td><td>advice</td><td class="ex">You should see a doctor.</td></tr>
+      <tr><td class="en">must / have to</td><td>necessity</td><td class="ex">I have to work tonight.</td></tr>
+      <tr><td class="en">may / might</td><td>possibility</td><td class="ex">It may rain. I might be late.</td></tr>
+      <tr><td class="en">would</td><td>politeness, imagination</td><td class="ex">I would like a coffee.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">Politeness ladder</span><p>Give me water → Can you give me water? → Could you give me some water, please? In Australia, <b>"Could you… please?"</b> is your safest daily tool.</p></div>
+
+  <h3>Tool 10 — Prepositions (small words of place &amp; time)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Word</th><th>Use</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td class="en">in</td><td>inside; months/years; cities</td><td class="ex">in the room · in July · in Sydney · in the morning</td></tr>
+      <tr><td class="en">on</td><td>surface; days/dates; transport</td><td class="ex">on the table · on Monday · on the bus</td></tr>
+      <tr><td class="en">at</td><td>point/place; clock time</td><td class="ex">at home · at the station · at 9 o'clock · at night</td></tr>
+      <tr><td class="en">to</td><td>direction</td><td class="ex">go to work · from Kogarah to the city</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="lab">IN-ON-AT pyramid (time)</span><p>Big box → <b>in</b> (months, years: in June). Middle → <b>on</b> (days: on Friday). Small point → <b>at</b> (clock: at 5 pm). Big-in, day-on, time-at.</p></div>
+
+  <h3>Tool 11 — Connectors (joining ideas like a train)</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Connector</th><th>Job</th><th>Example</th></tr></thead>
+    <tbody>
+      <tr><td class="en">and / also</td><td>add</td><td class="ex">I study and work. I also play cricket.</td></tr>
+      <tr><td class="en">but / however</td><td>contrast</td><td class="ex">The job is hard, but I like it.</td></tr>
+      <tr><td class="en">because / so</td><td>reason / result</td><td class="ex">I was late because the train stopped, so I called my boss.</td></tr>
+      <tr><td class="en">first / then / after that / finally</td><td>order a story</td><td class="ex">First I wash my hands, then I cook, finally I rest.</td></tr>
+      <tr><td class="en">if</td><td>condition</td><td class="ex">If it rains, I will take a taxi.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Bonus — Numbers, Time, Dates &amp; Money out loud</h3>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Type</th><th>Written</th><th>Say it like</th></tr></thead>
+    <tbody>
+      <tr><td class="en">Prices</td><td>$4.50 · $130</td><td class="ex">"four fifty" · "a hundred and thirty dollars"</td></tr>
+      <tr><td class="en">Time</td><td>9:15 · 9:30 · 9:45</td><td class="ex">"quarter past nine" · "half past nine" · "quarter to ten"</td></tr>
+      <tr><td class="en">Dates</td><td>11 June · 2026</td><td class="ex">"the eleventh of June" · "twenty twenty-six"</td></tr>
+      <tr><td class="en">Tricky pairs</td><td>13 vs 30 · 14 vs 40</td><td class="ex">thir-TEEN vs THIR-ty (punch the END for -teen, the START for -ty)</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="practice">
+    <div class="ph">✅ Part 4 Grand Revision — the seven shapes</div>
+    <div class="pb">
+    <p>Take one idea — "study English" — and say it in every shape. When this flows without reading, Part 4 is yours:</p>
+    <ol>
+      <li><b>Habit:</b> I study English every day.</li>
+      <li><b>Now:</b> I am studying English now.</li>
+      <li><b>Past:</b> I studied English yesterday.</li>
+      <li><b>Future:</b> I will study English tomorrow.</li>
+      <li><b>Perfect:</b> I have studied English for two months.</li>
+      <li><b>Negative:</b> I don't study at noon.</li>
+      <li><b>Question:</b> Where do you study English?</li>
+    </ol>
+    </div>
+  </div>
+</section>
+
+<!-- PART 5 -->
+<section class="part reveal" id="p5">
+  <span class="part-num">Part 05 · Walls</span>
+  <h2>Sentence Patterns — your sentence machines</h2>
+  <p class="sub">A pattern is a mould for making sweets (মিষ্টির ছাঁচ). The mould stays the same; you change the filling. "I want to ___" is one mould — pour in any verb and a perfect sentence comes out. Master ~50 moulds and you make thousands of sentences with zero translation.</p>
+
+  <h3>Group A — Talking about me</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Pattern</th><th>Examples</th></tr></thead><tbody>
+    <tr><td class="en">I am …</td><td class="ex">I am a student. I am from Bangladesh. I am interested in technology.</td></tr>
+    <tr><td class="en">I have …</td><td class="ex">I have a question. I have two part-time jobs.</td></tr>
+    <tr><td class="en">I feel …</td><td class="ex">I feel tired today. I feel that this plan is risky.</td></tr>
+    <tr><td class="en">I am good at … / bad at …</td><td class="ex">I am good at cooking. I am bad at remembering names.</td></tr>
+  </tbody></table></div>
+
+  <h3>Group B — Wants, needs &amp; plans</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Pattern</th><th>Examples</th></tr></thead><tbody>
+    <tr><td class="en">I want to …</td><td class="ex">I want to improve my English. I want to take a break.</td></tr>
+    <tr><td class="en">I need to …</td><td class="ex">I need to finish this today. I need to talk to you.</td></tr>
+    <tr><td class="en">I would like to … (polite)</td><td class="ex">I would like to order, please. I'd like to book a room.</td></tr>
+    <tr><td class="en">I have to … (no choice)</td><td class="ex">I have to work tonight. I have to submit it by Friday.</td></tr>
+    <tr><td class="en">I am going to / planning to …</td><td class="ex">I am going to call my family. I am planning to visit Dhaka.</td></tr>
+  </tbody></table></div>
+
+  <h3>Group C — Opinions &amp; thoughts (the "smart speaker" group)</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Pattern</th><th>Examples</th></tr></thead><tbody>
+    <tr><td class="en">I think … / I believe …</td><td class="ex">I think the price is too high. I believe this plan will work.</td></tr>
+    <tr><td class="en">In my opinion, …</td><td class="ex">In my opinion, this is the best option.</td></tr>
+    <tr><td class="en">The reason is … / That's why …</td><td class="ex">The bus was full — that's why I walked.</td></tr>
+    <tr><td class="en">I agree / I don't agree, because …</td><td class="ex">I don't agree, because the cost is too high.</td></tr>
+    <tr><td class="en">It depends on …</td><td class="ex">It depends on the weather.</td></tr>
+  </tbody></table></div>
+
+  <h3>Group D — Past &amp; experience</h3>
+  <div class="pillrow">
+    <span class="pill">I used to … <span style="color:var(--ink-soft)">(past habit, now stopped)</span></span>
+    <span class="pill">I have … before / I have never …</span>
+    <span class="pill">When I was …, I …</span>
+    <span class="pill">It was the first time I …</span>
+  </div>
+
+  <h3>Group E — Asking &amp; requesting (survival group)</h3>
+  <div class="pillrow">
+    <span class="pill">Can I … ? / Could I … ?</span>
+    <span class="pill">Could you … please?</span>
+    <span class="pill">Do you know … ?</span>
+    <span class="pill">Is it okay if I … ?</span>
+    <span class="pill">How do I … ?</span>
+    <span class="pill">What does … mean?</span>
+  </div>
+
+  <h3>Group F — If, suggestions &amp; soft language</h3>
+  <div class="pillrow">
+    <span class="pill">If I …, I will …</span>
+    <span class="pill">If I were you, I would …</span>
+    <span class="pill">Why don't we … ? / Let's …</span>
+    <span class="pill">Maybe we should …</span>
+    <span class="pill">I'm not sure, but …</span>
+    <span class="pill">Sorry, I didn't catch that.</span>
+  </div>
+  <div class="tip"><span class="lab">Pattern stacking</span><p>Real fluency joins 2–3 patterns with connectors: "I think we should leave now, because if we wait, we will miss the train." Practise stacking two patterns every day.</p></div>
+
+  <div class="practice">
+    <div class="ph">✅ Part 5 Practice — Machine-gun drill</div>
+    <div class="pb"><ol>
+      <li>Pick one pattern. Fire 10 sentences fast without stopping: "I want to eat. I want to sleep. I want to learn driving…" Speed kills translation.</li>
+      <li><b>Bengali → English:</b> আমার মনে হয় এটা ভালো বুদ্ধি → <span class="en">I think it is a good idea.</span> · যদি সময় পাই, আমি তোমাকে ফোন করব → <span class="en">If I have time, I will call you.</span></li>
+    </ol></div>
+  </div>
+</section>
+
+<!-- PART 6 -->
+<section class="part reveal" id="p6">
+  <span class="part-num">Part 06 · Roof</span>
+  <h2>Daily Conversation — real dialogues, ready to use</h2>
+  <p class="sub">A conversation is a cricket net session. The bowler's balls (questions) are mostly predictable, so you can practise your shots (answers) before the match. Read each dialogue out loud playing BOTH roles, then replay from memory with YOUR details.</p>
+
+  <div class="dialogue">
+    <div class="d-title">🤝 Self-introduction</div>
+    <div class="line"><span class="who">Daniel</span><span class="say">Hi, I don't think we've met. I'm Daniel.</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Hi Daniel, nice to meet you. I'm Riham.</span></div>
+    <div class="line"><span class="who">Daniel</span><span class="say">Nice to meet you too. Where are you from?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">I'm from Bangladesh. I came here about a year ago. I'm doing my Master's in IT.</span></div>
+    <div class="line"><span class="who">Daniel</span><span class="say">Oh nice! How do you like it here?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">I really like it. People are friendly. It was hard at first, but I'm getting used to it.</span></div>
+    <div class="skeleton"><b>Your 30-second skeleton:</b> "Hi, I'm ___. I'm from ___. I'm a ___ / I work as a ___. I've been here for ___. In my free time, I like ___. Nice to meet you."</div>
+  </div>
+
+  <div class="dialogue">
+    <div class="d-title">🛒 Shopping</div>
+    <div class="line"><span class="who">Staff</span><span class="say">Hi there, how can I help you?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Hi, I'm looking for a phone charger. Do you have one for this model?</span></div>
+    <div class="line"><span class="who">Staff</span><span class="say">Sure, they're in aisle three.</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Thanks. Excuse me, how much is this one?</span></div>
+    <div class="line"><span class="who">Staff</span><span class="say">That's twenty-five dollars.</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Hmm, it's a bit expensive. Do you have anything cheaper? … Okay, I'll take this one. Can I pay by card?</span></div>
+  </div>
+
+  <div class="dialogue">
+    <div class="d-title">🍽️ Restaurant</div>
+    <div class="line"><span class="who">Waiter</span><span class="say">Good evening. Table for how many?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Table for two, please. Could we see the menu?</span></div>
+    <div class="line"><span class="who">Waiter</span><span class="say">Here you go. Are you ready to order?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Yes. I would like the chicken curry with rice, please. And could you make it less spicy?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Excuse me, could we get the bill, please? The food was delicious, by the way.</span></div>
+  </div>
+
+  <div class="dialogue">
+    <div class="d-title">🩺 Doctor</div>
+    <div class="line"><span class="who">Doctor</span><span class="say">What brings you in today?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">I haven't been feeling well for three days. I have a headache, a sore throat, and a slight fever.</span></div>
+    <div class="line"><span class="who">Doctor</span><span class="say">Any cough? Any allergies?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">A little, mostly at night. Just paracetamol. No allergies, as far as I know.</span></div>
+    <div class="line"><span class="who">Doctor</span><span class="say">It looks like a viral infection. Rest, drink water, and take this twice a day.</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Twice a day — after food? Do I need to come back if it doesn't improve?</span></div>
+  </div>
+
+  <div class="dialogue">
+    <div class="d-title">📞 Phone call</div>
+    <div class="line you"><span class="who">You</span><span class="say">Hello, this is Riham. May I speak to Mr. Khan, please?</span></div>
+    <div class="line"><span class="who">Other</span><span class="say">He's not available right now. Can I take a message?</span></div>
+    <div class="line you"><span class="who">You</span><span class="say">Yes, please. Could you tell him Riham called about the Friday meeting?</span></div>
+    <div class="skeleton"><b>Phone survival lines:</b> "Sorry, the line is bad — could you repeat that?" · "Could you speak a little slowly, please?" · "Let me write that down." · "I'll call you back in ten minutes."</div>
+  </div>
+
+  <div class="tip"><span class="lab">The other 11 situations</span><p>The full book also drills: Family · Friends &amp; small talk · University · Office · Directions · Airport · Hotel · Job interview · Presentations · Meetings · plus harder second-round versions (returning an item, a polite complaint, booking an appointment, calling in sick, group work).</p></div>
+
+  <h4>Daily survival lines — use everywhere</h4>
+  <div class="pillrow">
+    <span class="pill">Sorry, I didn't catch that.</span>
+    <span class="pill">Could you say that again, please?</span>
+    <span class="pill">How do you say ___ in English?</span>
+    <span class="pill">What does ___ mean?</span>
+    <span class="pill">No worries.</span>
+    <span class="pill">That makes sense.</span>
+    <span class="pill">Sounds good.</span>
+  </div>
+</section>
+
+<!-- PART 7 -->
+<section class="part reveal" id="p7">
+  <span class="part-num">Part 07 · Roof</span>
+  <h2>Fluency Training — from sentences to speech</h2>
+  <p class="sub">You now have ingredients (Part 3), methods (Part 4), recipes (Part 5), and full meals (Part 6). Fluency is cooking under time pressure — training your mouth to move WITHOUT the Bengali translator in your head.</p>
+
+  <div class="analogy"><div class="ic">⏱️</div><div><span class="lab">The 3-second rule</span><p>Start speaking within 3 seconds. Wait longer and your brain calls the Bengali translator. A simple sentence NOW beats a perfect sentence in 10 seconds.</p></div></div>
+
+  <h3>The Story Skeleton (works for any story)</h3>
+  <div class="tip"><span class="lab">Skeleton</span><p>One day, ___ (when/where) → I was ___ (situation) → Suddenly, ___ (problem) → So I ___ (action) → Finally, ___ (result) → I felt ___ / I learned ___.</p></div>
+  <p><i>"One day last winter, I was waiting for the bus after my night shift. Suddenly, it started raining heavily, and I had no umbrella. So I ran to a shop and waited. The shopkeeper was kind — he gave me tea. Finally the rain stopped and I got home at 2 am. I felt tired but thankful. I learned: always keep an umbrella in my bag!"</i></p>
+
+  <h3>The 1-3-5 minute talk ladder (weekly test)</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Level</th><th>Task</th><th>Pass when</th></tr></thead><tbody>
+    <tr><td class="en">1 minute</td><td>A simple topic: my family / my phone / my favourite food</td><td class="ex">You speak the full minute with pauses, but never STOP.</td></tr>
+    <tr><td class="en">3 minutes</td><td>A story with the skeleton + your opinion at the end</td><td class="ex">You use first/then/because/finally, and finish with "I think…"</td></tr>
+    <tr><td class="en">5 minutes</td><td>Mini-presentation: opening, 3 points, a closing</td><td class="ex">Clear structure: opening → 3 points → "to sum up".</td></tr>
+  </tbody></table></div>
+  <div class="pillrow">
+    <span class="pill"><b>Fillers</b> Well… · Let me think… · How can I say it… · What I mean is… · Anyway…</span>
+  </div>
+
+  <div class="analogy"><div class="ic">👂</div><div><span class="lab">Speaking starts in the ears</span><p>15 minutes of listening a day feeds your speaking. Listen slightly below your level (~80% understood). One 3-minute clip watched 3 times teaches more than a 1-hour movie once. Use English subtitles, never Bengali — Bengali subtitles train translation.</p></div></div>
+
+  <h3>The tennis rule — keep a conversation alive</h3>
+  <div class="tip"><span class="lab">Always hit the ball back</span><p>Answer + ONE extra detail + return question. Weak: "Where are you from?" → "Bangladesh." (dies). Strong: "Bangladesh — a city called Dhaka. It's very lively, a bit like Sydney traffic! How about you, are you from here?"</p></div>
+</section>
+
+<!-- PART 8 -->
+<section class="part reveal" id="p8">
+  <span class="part-num">Part 08 · Polish</span>
+  <h2>Better Vocabulary — upgrade your weak words</h2>
+  <p class="sub">Your speech is a house you already built. Now we repaint it. You repeat "good, bad, very, nice" because they are your default paint. Upgrade ONE word pair per day — use the new word 3 times that day.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Weak</th><th>Better</th><th>Upgrade</th></tr></thead><tbody>
+    <tr><td class="en">good</td><td>great, excellent, helpful, tasty, friendly</td><td class="ex">The food was good → The food was <b>delicious</b>.</td></tr>
+    <tr><td class="en">bad</td><td>terrible, awful, poor, disappointing</td><td class="ex">The service was bad → <b>disappointing</b>.</td></tr>
+    <tr><td class="en">very + word</td><td>very tired → <b>exhausted</b> · very big → <b>huge</b> · very cold → <b>freezing</b> · very hot → <b>boiling</b> · very important → <b>essential</b></td><td class="ex">I am very tired → I am <b>exhausted</b>.</td></tr>
+    <tr><td class="en">nice</td><td>kind (person), lovely (place), pleasant (weather)</td><td class="ex">A nice day → A <b>pleasant</b> day.</td></tr>
+    <tr><td class="en">happy / sad</td><td>glad, pleased, delighted / upset, disappointed</td><td class="ex">I am happy → I am <b>pleased</b> with the result.</td></tr>
+    <tr><td class="en">like</td><td>enjoy, love, prefer, am a fan of</td><td class="ex">I like cricket → I'm a <b>big fan of</b> cricket.</td></tr>
+    <tr><td class="en">say / tell</td><td>explain, mention, suggest, let someone know</td><td class="ex">He said the plan → He <b>explained</b> the plan.</td></tr>
+    <tr><td class="en">get</td><td>receive, buy, arrive, become, understand</td><td class="ex">I got a letter → I <b>received</b> a letter.</td></tr>
+  </tbody></table></div>
+  <div class="tip"><span class="lab">Warning</span><p>Do NOT replace every word — that sounds fake. Mix <b>70% simple + 30% upgraded</b> = natural, confident English.</p></div>
+</section>
+
+<!-- PART 9 -->
+<section class="part reveal" id="p9">
+  <span class="part-num">Part 09 · Polish</span>
+  <h2>Common Mistakes of Bangladeshi Learners</h2>
+  <p class="sub">Every cricketer from one region shares batting habits — they learned on the same pitch. Bengali speakers share the same English mistakes because Bengali grammar is our "home pitch." Knowing the difference removes them fast.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>✕ Mistake</th><th>✓ Correct</th><th>Why</th></tr></thead><tbody>
+    <tr><td class="ex">I am understand. / I am agree.</td><td class="en">I understand. / I agree.</td><td>These are full verbs — no am/is/are.</td></tr>
+    <tr><td class="ex">He go to office. / She have a car.</td><td class="en">He goes to the office. / She has a car.</td><td>English adds -s for he/she/it.</td></tr>
+    <tr><td class="ex">I didn't went. / She doesn't likes it.</td><td class="en">I didn't go. / She doesn't like it.</td><td>The helper carries the tense — main verb stays base.</td></tr>
+    <tr><td class="ex">I am here since two years.</td><td class="en">I have been here for two years.</td><td>Present perfect + for/since.</td></tr>
+    <tr><td class="ex">He is my cousin brother.</td><td class="en">He is my cousin.</td><td>"Cousin brother" is South-Asian English only.</td></tr>
+    <tr><td class="ex">I have a doubt.</td><td class="en">I have a question.</td><td>"Doubt" means suspicion, not question.</td></tr>
+    <tr><td class="ex">I am going to home.</td><td class="en">I am going home.</td><td>"Home" usually takes no "to".</td></tr>
+    <tr><td class="ex">She is more better. / most easiest</td><td class="en">She is better. / easiest</td><td>Never double the comparison.</td></tr>
+    <tr><td class="ex">I am having a car. / I am knowing him.</td><td class="en">I have a car. / I know him.</td><td>State verbs (have, know, like, want) take no -ing.</td></tr>
+    <tr><td class="ex">Myself Riham.</td><td class="en">I am Riham. / My name is Riham.</td><td>"Myself + name" is not standard.</td></tr>
+    <tr><td class="ex">He is angry on me. / married with</td><td class="en">He is angry with me. / married to</td><td>Preposition partners are fixed — learn as chunks.</td></tr>
+    <tr><td class="ex">open the light / give an exam</td><td class="en">turn on the light / sit an exam (AusE)</td><td>Direct translation of "লাইট খোলা / পরীক্ষা দেওয়া".</td></tr>
+    <tr><td class="ex">Please do the needful. / I will revert you.</td><td class="en">Please do this for me. / I will get back to you.</td><td>Old subcontinent office English — sounds odd here.</td></tr>
+    <tr><td class="ex">Today morning I came late.</td><td class="en">This morning I came late.</td><td>"this morning / this evening / tonight" — not "today morning".</td></tr>
+  </tbody></table></div>
+</section>
+
+<!-- PART 10 -->
+<section class="part reveal" id="p10">
+  <span class="part-num">Part 10 · Polish</span>
+  <h2>Pronunciation — clear beats perfect</h2>
+  <p class="sub">Pronunciation is like handwriting. It doesn't need to be beautiful — it needs to be readable. We fix only the sounds that make Bengali speakers hard to understand. Goal: clear, not foreign.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>Sound</th><th>How to fix</th><th>Practice</th></tr></thead><tbody>
+    <tr><td class="en">V vs W</td><td>V: top teeth touch bottom lip, buzz. W: round lips like blowing a candle, teeth touch nothing.</td><td class="ex">very · water · window · "We were very wet."</td></tr>
+    <tr><td class="en">TH (think)</td><td>Tongue tip BETWEEN your teeth, blow air softly. See your tongue in a mirror.</td><td class="ex">think · three · thank · "Thank you for those three things."</td></tr>
+    <tr><td class="en">TH (this)</td><td>Same tongue position, but add voice (throat vibrates).</td><td class="ex">this · that · they · mother · weather</td></tr>
+    <tr><td class="en">Z vs J</td><td>Z is a buzzing S — smile, teeth close, buzz: zzzz.</td><td class="ex">zero · zoo · busy · music · easy</td></tr>
+    <tr><td class="en">S at word start</td><td>Start with a long ssss, then finish. Never add "i" before it.</td><td class="ex">school · station · speak · student</td></tr>
+    <tr><td class="en">Silent letters</td><td>Memorize the famous silents.</td><td class="ex">Wednesday → "WENZ-day" · half → "haaf" · know → "no"</td></tr>
+  </tbody></table></div>
+  <div class="tip"><span class="lab">Word stress = the secret</span><p>English punches ONE syllable. Wrong stress confuses listeners more than a wrong sound: a-BOUT · ho-TEL · com-PU-ter · uni-VER-si-ty. And the sentence punches meaning words: "I'm GOING to the STATION to MEET my FRIEND." Say small words quickly and softly.</p></div>
+  <div class="analogy"><div class="ic">🎬</div><div><span class="lab">Shadowing — the #1 exercise</span><p>Play a slow English clip. Pause after each sentence and copy it EXACTLY — sound, speed, music. Five minutes a day in front of a mirror for TH and V/W.</p></div></div>
+</section>
+
+<!-- PART 11 -->
+<section class="part reveal" id="p11">
+  <span class="part-num">Part 11 · Roof</span>
+  <h2>Interview &amp; Office English — professional mode</h2>
+  <p class="sub">You have street clothes and formal clothes. Same body, different dress. Professional English is the grammar you already know, in formal dress. Nothing new — only polish.</p>
+
+  <h3>The Big 6 interview questions</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Question</th><th>Answer skeleton</th></tr></thead><tbody>
+    <tr><td class="en">1. Tell me about yourself.</td><td class="ex">"I'm ___. I have ___ years of experience in ___. Currently I am ___. My strengths are ___ and ___. In my last role, I ___ (one achievement)."</td></tr>
+    <tr><td class="en">2. Why do you want this job?</td><td class="ex">"Three reasons. First, the role matches my skills in ___. Second, I admire ___ about this company. Finally, I can add value by ___."</td></tr>
+    <tr><td class="en">3. What are your strengths?</td><td class="ex">Strength + example + result — never just a list.</td></tr>
+    <tr><td class="en">4. What is your weakness?</td><td class="ex">Weakness + action + improvement: "I struggled with ___, so I started ___, and now I'm much better."</td></tr>
+    <tr><td class="en">5. A difficult situation?</td><td class="ex">STAR: Situation → Task → Action → Result. (The Story Skeleton in a suit.)</td></tr>
+    <tr><td class="en">6. Any questions for us?</td><td class="ex">ALWAYS yes: "What does a typical day look like in this role?"</td></tr>
+  </tbody></table></div>
+
+  <h3>Formal vs casual — the dress code</h3>
+  <div class="tbl-wrap"><table><thead><tr><th>Casual (friends)</th><th>Professional (work)</th></tr></thead><tbody>
+    <tr><td class="ex">Wanna meet?</td><td class="en">Would you be available to meet?</td></tr>
+    <tr><td class="ex">Gimme a sec.</td><td class="en">Could you give me a moment, please?</td></tr>
+    <tr><td class="ex">No worries.</td><td class="en">You're welcome. / Happy to help.</td></tr>
+    <tr><td class="ex">I can't come.</td><td class="en">Unfortunately, I won't be able to attend.</td></tr>
+    <tr><td class="ex">What?</td><td class="en">Sorry, could you say that again?</td></tr>
+  </tbody></table></div>
+  <div class="tip"><span class="lab">Report a problem like a pro</span><p>Problem → reason → solution. Never only the problem: "There's a small issue with ___. I think the reason is ___. My suggestion is ___."</p></div>
+</section>
+
+<!-- PART 12 -->
+<section class="part reveal" id="p12">
+  <span class="part-num">Part 12 · The engine</span>
+  <h2>Daily Practice Plan — your 60-minute engine</h2>
+  <p class="sub">Fluency is like fitness — it comes from a routine, not a one-day marathon. About 60 minutes a day, splittable into small pieces (bus, breaks, before sleep).</p>
+  <div class="tbl-wrap"><table><thead><tr><th>When</th><th>Min</th><th>What</th></tr></thead><tbody>
+    <tr><td class="en">Morning</td><td>5</td><td class="ex">"Today I am going to…" + your Verb of the Day.</td></tr>
+    <tr><td class="en">Travel / break 1</td><td>10</td><td class="ex">One vocabulary table or one upgrade pair — Rule of 3.</td></tr>
+    <tr><td class="en">Travel / break 2</td><td>10</td><td class="ex">The English Hour thinking + No-Translation Drill with objects.</td></tr>
+    <tr><td class="en">Study block</td><td>20</td><td class="ex">The current chapter + its full practice box.</td></tr>
+    <tr><td class="en">Evening</td><td>10</td><td class="ex">One dialogue, shadow-acted + 5 min pronunciation.</td></tr>
+    <tr><td class="en">Before sleep</td><td>5</td><td class="ex">"Yesterday Story" in past tense. Non-negotiable. Every night.</td></tr>
+  </tbody></table></div>
+  <div class="tip"><span class="lab">The unbreakable rule</span><p>A 15-minute bad day is fine. A zero day is not. Even on your worst day, do the before-sleep Yesterday Story. The chain must not break.</p></div>
+</section>
+
+<!-- PART 13 -->
+<section class="part reveal" id="p13">
+  <span class="part-num">Part 13 · The engine</span>
+  <h2>Revision System — how to never forget</h2>
+  <p class="sub">Memory is a path through grass. Walk it once and the grass grows back. Walk it on day 1, 3, 7, and 21 and it becomes a permanent road. This is spaced repetition — the most proven memory method in science.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>When</th><th>What to do</th></tr></thead><tbody>
+    <tr><td class="en">Day 1</td><td class="ex">Study fully + do the practice box.</td></tr>
+    <tr><td class="en">Day 3</td><td class="ex">Quick pass (5 min): cover the English, look at Bengali, SAY the English out loud.</td></tr>
+    <tr><td class="en">Day 7</td><td class="ex">Self-test only: do the chapter's questions from memory.</td></tr>
+    <tr><td class="en">Day 21</td><td class="ex">Use-test: build 5 new spoken sentences. Easy → permanent road. Hard → restart at Day 1.</td></tr>
+  </tbody></table></div>
+  <h3>Your revision notebook (three pages)</h3>
+  <div class="pillrow">
+    <span class="pill"><b>Hard Words</b> — any word you forget twice, with one example</span>
+    <span class="pill"><b>My Mistakes</b> — every correction as ✕ → ✓ (your own Part 9)</span>
+    <span class="pill"><b>Wins</b> — every real success: "ordered food alone." Read it when you feel weak.</span>
+  </div>
+</section>
+
+  </div><!-- /.content -->
+</div><!-- /.layout -->
+
+<!-- SENTENCE BANK -->
+<section class="steps-section" id="bank">
+  <div class="section-head reveal">
+    <span class="eyebrow">Bonus · weekly test</span>
+    <h2>The 100-sentence test bank</h2>
+    <p>Cover the answer. Say each English sentence within 3 seconds, then tap the card to check. Score 1 point each. Weeks 1–6: aim 30+/40 on the first set. Weeks 7–12: aim 80+/100 on all of it.</p>
+  </div>
+  <div class="bank-controls">
+    <button class="reset-btn" id="revealAll">Reveal all</button>
+    <button class="reset-btn" id="hideAll">Hide all</button>
+  </div>
+  <div class="bank" id="sentenceBank"></div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner reveal">
+    <p class="final">You already did the hardest part long ago — you became fluent in one language starting from zero, as a baby, with no book at all. Your brain has done this before. This time you have a map.</p>
+    <p class="bn">প্রতিদিন একটু একটু করে — একদিন আপনি অবাক হয়ে দেখবেন, আপনি ভাবছেনও ইংরেজিতে।<br>See you at fluency.</p>
+    <div class="three">
+      <div><span class="eyebrow">Habit 1</span><p>The English Hour — one hour of English thinking daily.</p></div>
+      <div><span class="eyebrow">Habit 2</span><p>The Yesterday Story — every night before sleep, in past tense.</p></div>
+      <div><span class="eyebrow">Habit 3</span><p>The Verb of the Day — one verb, used five times in real life.</p></div>
+    </div>
+    <p class="meta">Zero to Hero · English Speaking Notebook · Core 1000 words · 30 steps · 100-sentence test bank · Built for Bengali speakers, step by step.</p>
+  </div>
+</footer>
+
+<script>
+// ---- safe storage (works on published site, no-ops in preview) ----
+const store={
+  get(k){try{return localStorage.getItem(k)}catch(e){return null}},
+  set(k,v){try{localStorage.setItem(k,v)}catch(e){}},
+};
+
+// ---------- 30 STEPS ----------
+const STEPS=[
+ ["Mindset","Explain the 3-jobs problem and the Rule of 3 from memory."],
+ ["The 80/20 Rule","Say your personal top-5 places for English."],
+ ["Survival 60","Name 15 objects around you in 60 seconds."],
+ ["People & Food","Speak 1 minute about your family and favourite food."],
+ ["Home & Time","Describe your room and daily timetable out loud."],
+ ["Places & Feelings","Give directions home + say 5 feeling sentences."],
+ ["Power 50 Verbs","Say past forms of go, come, eat, buy, take, see, make — fast."],
+ ["Work & Adjectives","Speak 1 minute about your studies or job."],
+ ["Body, Money, Phrasal","Say 5 phrasal-verb sentences about your real day."],
+ ["am / is / are","10 true am/is/are sentences without stopping."],
+ ["have / has","8 'I have / She has' sentences about real life."],
+ ["Present Simple","1-minute 'My Day' talk with correct he/she -s."],
+ ["Present Continuous","2-minute live commentary of what's happening now."],
+ ["Past Simple","1-minute 'Yesterday Story' with 5+ past verbs."],
+ ["Future","1-minute 'Tomorrow Plan' using going to + will."],
+ ["Present Perfect","5 'I have…' + 3 'I have never…' sentences."],
+ ["Negatives & Questions","Ask and answer 10 WH questions out loud."],
+ ["Modals","One sentence each: can, could, should, must, would."],
+ ["Prepositions & Connectors","Tell the Story Train: first/then/because/finally."],
+ ["Part 4 Grand Revision","The seven-shapes drill with 3 verbs, smooth."],
+ ["Numbers, Dates & Money","Say today's date, the time, and 5 prices correctly."],
+ ["Patterns A–C","Machine-gun drill: 10 sentences in 60 seconds."],
+ ["Patterns D–F","Stack two patterns in one sentence, 5 times."],
+ ["Dialogues 1–8","Act your self-intro + one dialogue from memory."],
+ ["Dialogues 9–16","Act the doctor and phone dialogues from memory."],
+ ["Fluency Training","Pass the 3-minute story test, recorded."],
+ ["Better Vocabulary","1-minute talk using 3 upgraded words."],
+ ["Bangladeshi Mistakes","Fix all 4 test sentences instantly."],
+ ["Pronunciation","Read the trap sentence cleanly; shadow 1 min of video."],
+ ["Interview & Office","Record the Big-6 answers. Then start Pass 2!"],
+];
+const track=document.getElementById('stepTrack');
+let done=JSON.parse(store.get('z2h_steps')||'[]');
+function renderSteps(){
+  track.innerHTML='';
+  STEPS.forEach((s,i)=>{
+    const n=i+1, isDone=done.includes(n);
+    const el=document.createElement('div');
+    el.className='stepcard'+(isDone?' done':'');
+    el.innerHTML=`<div class="sn">${isDone?'✓':n}</div><div class="stxt"><b>${s[0]}</b>${s[1]}</div>`;
+    el.onclick=()=>{
+      if(done.includes(n)) done=done.filter(x=>x!==n); else done.push(n);
+      store.set('z2h_steps',JSON.stringify(done)); renderSteps();
+    };
+    track.appendChild(el);
+  });
+  const pct=Math.round(done.length/STEPS.length*100);
+  document.getElementById('progFill').style.width=pct+'%';
+  document.getElementById('progLabel').textContent=`${done.length} / ${STEPS.length} steps`;
+}
+document.getElementById('resetSteps').onclick=()=>{if(confirm('Reset all step progress?')){done=[];store.set('z2h_steps','[]');renderSteps();}};
+renderSteps();
+
+// ---------- 100 SENTENCE BANK ----------
+const BANK=[
+["আমি একজন ছাত্র।","I am a student."],["আমার দুইটা চাকরি আছে।","I have two jobs."],["আমি প্রতিদিন সকালে কাজে যাই।","I go to work every morning."],["সে কফি পছন্দ করে না।","She doesn't like coffee."],["এখন বৃষ্টি হচ্ছে।","It is raining now."],["আমি এখন রাতের খাবার রান্না করছি।","I am cooking dinner now."],["আমি গতকাল দেরিতে ঘুমিয়েছি।","I slept late yesterday."],["আমরা গত সপ্তাহে একটা সিনেমা দেখেছি।","We watched a movie last week."],["দোকানগুলো বন্ধ ছিল।","The shops were closed."],["আমি কাল তোমাকে ফোন করব।","I will call you tomorrow."],
+["আমরা আগামী মাসে বাসা বদলাচ্ছি।","We are moving next month."],["আমি এইমাত্র কাজ শেষ করেছি।","I have just finished my work."],["আমি কখনো তুষার দেখিনি।","I have never seen snow."],["আমি দুই বছর ধরে সিডনিতে আছি।","I have been in Sydney for two years."],["আমি মাংস খাই না।","I don't eat meat."],["সে গতকাল আসেনি।","He didn't come yesterday."],["তুমি কি ব্যস্ত?","Are you busy?"],["সে কি এখানে কাজ করে?","Does she work here?"],["তুমি কোথায় থাকো?","Where do you live?"],["তুমি গতকাল কী করেছিলে?","What did you do yesterday?"],
+["আমি কি জানালাটা খুলতে পারি?","Can I open the window?"],["আপনি কি একটু আস্তে বলবেন?","Could you speak a little slowly, please?"],["তোমার ডাক্তার দেখানো উচিত।","You should see a doctor."],["আমাকে আজ রাতে কাজ করতেই হবে।","I have to work tonight."],["আজ বৃষ্টি হতে পারে।","It may rain today."],["আমি এক কাপ কফি চাই।","I would like a cup of coffee."],["চাবিগুলো টেবিলের উপরে।","The keys are on the table."],["আমার ক্লাস সোমবার সকাল ১০টায়।","My class is on Monday at 10 am."],["আমি ক্লান্ত ছিলাম, তাই আগে ঘুমিয়ে পড়েছি।","I was tired, so I slept early."],["প্রথমে আমি রান্না করি, তারপর খাই।","First I cook, then I eat."],
+["যদি সময় পাই, আমি আসব।","If I have time, I will come."],["আমার মনে হয় দামটা বেশি।","I think the price is too high."],["আমার জানামতে, অফিস নয়টায় খোলে।","As far as I know, the office opens at nine."],["আমি আগে প্রতি শুক্রবার ক্রিকেট খেলতাম।","I used to play cricket every Friday."],["এটার দাম কত?","How much is this?"],["আমি কার্ডে টাকা দিতে পারি?","Can I pay by card?"],["আমি সকাল সাতটায় ঘুম থেকে উঠি।","I get up at seven in the morning."],["আমরা দুধ শেষ করে ফেলেছি।","We have run out of milk."],["আমি আমার চাবি খুঁজছি।","I am looking for my keys."],["আমি সপ্তাহান্তের অপেক্ষায় আছি।","I am looking forward to the weekend."],
+["আমি সাঁতার কাটতে পারি না।","I can't swim."],["তুমি কি কখনো সুশি খেয়েছ?","Have you ever eaten sushi?"],["সে এইমাত্র চলে গেছে।","She has just left."],["আমি এখনও খাইনি।","I haven't eaten yet."],["ট্রেনটা পাঁচটায় ছাড়ে।","The train leaves at five."],["আমি সাধারণত এগারোটায় ঘুমাই।","I usually sleep at eleven."],["সে আমার চেয়ে লম্বা।","He is taller than me."],["এটা সবচেয়ে সহজ উপায়।","This is the easiest way."],["আমি ইংরেজিতে কথা বলতে একটু নার্ভাস।","I am a bit nervous about speaking English."],["তুমি ঠিক বলেছ।","You are right."],
+["আমার মাথা ব্যথা করছে।","I have a headache."],["আমি তিন দিন ধরে অসুস্থ।","I have been sick for three days."],["তোমার বেশি পানি খাওয়া উচিত।","You should drink more water."],["আমি ওষুধটা খেতে ভুলে গেছি।","I forgot to take the medicine."],["চিন্তা করো না, সব ঠিক হয়ে যাবে।","Don't worry, everything will be fine."],["আমি তোমার সাথে একমত না, কারণ খরচ বেশি।","I don't agree with you, because the cost is too high."],["এটা নির্ভর করে আবহাওয়ার উপর।","It depends on the weather."],["আমার মতে, দ্বিতীয়টা ভালো।","In my opinion, the second one is better."],["সত্যি বলতে, আমি নিশ্চিত না।","To be honest, I am not sure."],["যাই হোক, পরে কথা হবে।","Anyway, talk to you later."],
+["আমি টাকা জমাচ্ছি একটা গাড়ির জন্য।","I am saving money for a car."],["ভাড়া কত?","How much is the fare?"],["আমি অনলাইনে অর্ডার করেছি।","I ordered online."],["ডেলিভারি কখন আসবে?","When will the delivery arrive?"],["আমার ফোনের চার্জ শেষ।","My phone has run out of charge."],["ওয়াইফাই কাজ করছে না।","The Wi-Fi is not working."],["আমি তোমাকে লিংকটা পাঠাচ্ছি।","I am sending you the link."],["আমার পাসওয়ার্ড মনে নেই।","I don't remember my password."],["স্ক্রিনশটটা পাঠাও।","Send the screenshot."],["আমি ভিডিও কলে আছি।","I am on a video call."],
+["আমি আমার পরিবারকে খুব মিস করি।","I miss my family a lot."],["আমি সপ্তাহে দুইবার বাসায় ফোন করি।","I call home twice a week."],["আবহাওয়া হঠাৎ বদলে গেল।","The weather changed suddenly."],["আমি প্রায় বাসটা মিস করেছিলাম।","I almost missed the bus."],["সবাই তোমার জন্য অপেক্ষা করছে।","Everyone is waiting for you."],["আমার কিছু সাহায্য দরকার।","I need some help."],["আমি এই শব্দের মানে জানি না।","I don't know the meaning of this word."],["\"due date\" মানে কী?","What does \"due date\" mean?"],["আস্তে আস্তে আমার উন্নতি হচ্ছে।","I am improving little by little."],["আমি প্রতিদিন নতুন কিছু শিখি।","I learn something new every day."],
+["তুমি কোন বাসে যাও?","Which bus do you take?"],["স্টেশনে যেতে কতক্ষণ লাগে?","How long does it take to get to the station?"],["আমি ভুল বাসে উঠেছিলাম।","I got on the wrong bus."],["পরের স্টপে নামব।","I will get off at the next stop."],["আমি রাস্তা হারিয়ে ফেলেছি।","I am lost. / I lost my way."],["আমাকে এই ফর্মটা পূরণ করতে হবে।","I have to fill in this form."],["আমি গতকাল অ্যাসাইনমেন্ট জমা দিয়েছি।","I handed in my assignment yesterday."],["পরীক্ষার ফল কালকে দেবে।","The exam results will come out tomorrow."],["আমি নোট নিতে ভুলে গিয়েছিলাম।","I forgot to take notes."],["প্রশ্নটা আবার বুঝিয়ে বলবেন কি?","Could you explain the question again?"],
+["আমি আগামীকাল ব্যস্ত থাকব।","I will be busy tomorrow."],["আমরা কি মিটিংটা পিছিয়ে দিতে পারি?","Can we put off the meeting?"],["আমি পাঁচ মিনিটের মধ্যে আসছি।","I am coming in five minutes."],["দেরি হওয়ার জন্য দুঃখিত।","Sorry for being late. / Sorry about the delay."],["আমি যত তাড়াতাড়ি সব জানাব।","I will let you know as soon as possible."],["আজকের জন্য এটুকুই।","That's all for today."],["আপনার সাহায্যের জন্য ধন্যবাদ।","Thank you for your help."],["আপনার সাথে কথা বলে ভালো লাগল।","It was nice talking to you."],["আবার দেখা হবে।","See you again."],["আমি হাল ছাড়ব না।","I won't give up."],
+];
+const bankEl=document.getElementById('sentenceBank');
+BANK.forEach((s,i)=>{
+  const c=document.createElement('div');
+  c.className='sentence';
+  c.innerHTML=`<div class="qn">${i+1}</div><div class="q bn">${s[0]}</div><div class="a">${s[1]}</div><div class="hint">tap to reveal</div>`;
+  c.onclick=()=>c.classList.toggle('open');
+  bankEl.appendChild(c);
+});
+document.getElementById('revealAll').onclick=()=>document.querySelectorAll('.sentence').forEach(s=>s.classList.add('open'));
+document.getElementById('hideAll').onclick=()=>document.querySelectorAll('.sentence').forEach(s=>s.classList.remove('open'));
+
+// ---------- scroll reveal ----------
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ---------- rail active highlight ----------
+const railLinks=[...document.querySelectorAll('.rail a')];
+const parts=railLinks.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const so=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){
+  railLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));
+}})},{rootMargin:'-30% 0px -60% 0px'});
+parts.forEach(p=>so.observe(p));
+</script>
+</body>
+</html>
